@@ -7,7 +7,7 @@ import paginationView from './views/paginationView.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
-//hot reload (coming from parcel), wotks bad and need always to restart server
+//hot reload (coming from parcel), works bad and need always to restart server
 // if (module.hot) {
 //   module.hot.accept();
 // }
@@ -24,6 +24,7 @@ const controlRecipes = async function () {
 
     //2. Rendering the recipe
     recipeView.render(model.state.recipe);
+
   } catch (err) {
     recipeView.renderError();
   }
@@ -58,8 +59,17 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+const controlServings = function (newServings) {
+  //Update recipe servings (in state)
+  model.updateServings(newServings);
+
+  //Update the recipe view
+  recipeView.render(model.state.recipe);
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
+  recipeView.addHandlerUpdateServings(controlServings);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
 };
