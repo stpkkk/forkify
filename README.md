@@ -4,9 +4,9 @@ Vanilla JavaScript application that interacts with the Forkify API to fetch and 
 
 ![mapty-app](https://github.com/stpkkk/forkify/blob/main/preview.png)
 
-> The Forkify Recipe App allows users to search for recipes, users can view the recipe along with the cook time and also increase or decrease the amount of servings they need, users can also bookmark recipes, then they will stored in local storage so no database was required for this application.
+The Forkify Recipe App allows users to search for recipes, users can view the recipe along with the cook time and also increase or decrease the amount of servings they need, users can also bookmark recipes, then they will stored in local storage so no database was required for this application.
 
-For more examples, please refer to the Documentation
+For more examples, please refer to the <a href="https://forkify-api.herokuapp.com/v2">Documentation</a>
 
 ## Features
 
